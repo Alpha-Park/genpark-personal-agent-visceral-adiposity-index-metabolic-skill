@@ -1,0 +1,26 @@
+{
+  "name": "genpark-personal-agent-visceral-adiposity-index-metabolic-skill",
+  "version": "1.0.0",
+  "description": "Calculates Amato Visceral Adiposity Index (VAI), Lipid Accumulation Product (LAP), visceral adipose tissue (VAT) dysfunction, and prescribes mobilization protocols.",
+  "tools": [
+    {
+      "name": "calculate_visceral_adiposity_index",
+      "description": "Calculates sex-specific Visceral Adiposity Index (VAI), Lipid Accumulation Product (LAP), and risk tier.",
+      "parameters": {
+        "waist_circumference_cm": "float (default 88.0)",
+        "bmi": "float (default 24.5)",
+        "triglycerides_mg_dl": "float (default 110.0)",
+        "hdl_mg_dl": "float (default 52.0)",
+        "sex": "string (default 'male')"
+      }
+    },
+    {
+      "name": "prescribe_visceral_fat_mobilization_protocol",
+      "description": "Prescribes fasting window and Zone 2 exercise protocol to mobilize ectopic visceral adipose tissue.",
+      "parameters": {
+        "vai_score": "float (default 2.2)",
+        "current_fasting_window_hours": "float (default 12.0)"
+      }
+    }
+  ]
+}
